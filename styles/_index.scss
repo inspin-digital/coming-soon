@@ -8,7 +8,7 @@
 
 .hero {
     display: block;
-    width: 60%;
+    width: 62%;
     margin: 8% auto;
 
     h2 {
@@ -40,7 +40,7 @@
         font-size: 16px;
         border: 1px solid rgba($f-color, .2);
         border-radius: 4px;
-        padding: 10px 0 12px 18px;
+        padding: 10px 18px 12px 18px;
         margin: 0;
         outline: none;
         transition: border .1s;
@@ -72,6 +72,10 @@
         margin: 0 8px;
         -webkit-transition: background-color .2s;
         transition: background-color .2s;
+
+        &::after {
+            content: "Subscribe";
+        }
 
         &:hover {
             cursor: pointer;
@@ -122,4 +126,45 @@
     .hide {
         display: none;
     }
+}
+
+@media (max-width: 667px) {
+    .hero {
+        width: 72%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .logo {
+        margin: 32px 36px 56px 36px;
+    }
+
+    .hero {
+        width: 80%;
+
+        br {
+            display: none;
+        }
+
+        input {
+            width: calc(100% - 75px);
+        }
+
+        button {
+            padding: 8px 16px 12px 16px;
+            margin: 0 8px;
+
+            &::after {
+                content: "OK";
+            }
+        }
+
+        .links {
+            position: absolute;
+            bottom: 24px ;
+            width: 258px;
+        }
+    }
+
 }

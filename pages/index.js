@@ -39,7 +39,7 @@ function Index() {
           <label className="hide" htmlFor="email">email</label>
           <input type="email" name="email" placeholder="Email address"
             spellCheck="false" onChange={e => setEmail(e.target.value)} />
-          <button type="submit">Subscribe</button>
+          <button type="submit"></button>
         </form>
 
         <div className="links">
